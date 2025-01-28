@@ -321,3 +321,78 @@ body {
   text-decoration: underline; 
   color: #0077b5; 
 }
+@media screen and (max-width: 768px) {
+  body {
+      padding: 20px;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .profile-picture {
+      width: 50vw;
+      height: 50vw;
+      max-width: 150px;
+      max-height: 150px;
+      margin-left: 0;
+      margin-top: 30px;
+  }
+
+  .first-name {
+      font-size: 36px;
+  }
+
+  .portfolio-text {
+      font-size: 28px;
+  }
+
+  .middle-section {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .middle-section img {
+      width: 80%;
+      height: auto;
+  }
+
+  .first-row {
+      margin: 20px;
+  }
+
+  .txt1 {
+      font-size: 16px;
+  }
+
+  .mid-info {
+      font-size: 16px;
+  }
+
+  .button1 {
+      width: 100%;
+      padding: 10px 0;
+  }
+
+  .my-skills {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .star-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer1 {
+      flex-direction: column;
+  }
+
+  .copyright-text {
+      font-size: 14px;
+  }
+}

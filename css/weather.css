@@ -49,7 +49,6 @@ body, html {
   text-align: center;
   color: white; 
   z-index: 2; 
-  
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -202,8 +201,54 @@ body, html {
 .powered-btn:active {
   transform: scale(0.95);
 }
+@media (max-width: 768px) {
+  .image-container img.blue-sky {
+    height: 60vh; /* Set the image height to 60% of the viewport height */
+    object-fit: cover; /* Ensure the image covers the area */
+  }
 
+  .overlay-content .title {
+    font-size: 1.8em;
+  }
 
+  .overlay-content .action-btn {
+    font-size: 20px;
+  }
 
+  .weather-block {
+    width: 100px;
+    padding: 8px;
+  }
 
+  .weather-img-container {
+    height: 100px;
+  }
+}
 
+@media (max-width: 480px) {
+  .overlay-content {
+    padding: 10px;
+  }
+
+  .overlay-content .title {
+    font-size: 1.5em;
+  }
+
+  .overlay-content .action-btn {
+    font-size: 18px;
+  }
+
+  .weather-block {
+    width: 90px;
+    padding: 6px;
+  }
+
+  .weather-img-container {
+    height: 80px;
+  }
+
+  .powered-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
