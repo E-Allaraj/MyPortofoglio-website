@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather page</title>
+
+    <link rel="stylesheet" href="css/weather.css">
+  </head>
+  <body>
+    
+    <div class="earth-section">
+      <img class="earth1" src="images/banner.jpg">
+    </div>
+    <div class="blue-section">
+      <div class="image-container">
+          <img class="blue-sky" src="images/sky-background-video-conferencing_23-2148639325.avif">
+          
+          <div class="overlay-content">
+              <p class="title">EurOrbit</p>
+              <p class="action-btn">Balkans Weather Forecast</p>
+              <div class="powered-by">
+                <p class="powered-txt">Powered by</p>
+                <button class="powered-btn" onclick="window.location.href='https://www.7timer.info/doc.php?lang=en'">
+                  7Timer!
+                  <span class="tooltip-btn">Tap to visit 7Timer!</span>
+                </button>
+              </div>
+
+              <div class="selector">
+                <label for="city-selector">Select a city:</label>
+                <div class="select-wrapper">
+                    <select class="city-label" id="city-selector">
+                        <option disabled selected value="">Select a city</option>
+                        <option value="41.33,19.82">Tirane, Albania</option>
+                        <option value="42.66,21.16">Prishtine, Kosovo</option>
+                        <option value="37.98,23.72">Athens, Greece</option>
+                        <option value="41.998,21.425">Skopje, North Macedonia</option>
+                        <option value="44.817,20.456">Belgrade, Serbia</option>
+                        <option value="43.856,18.413">Sarajevo, Bosnia and Herzegovina</option>
+                        <option value="42.430,19.259">Podgorica, Montenegro</option>
+                        <option value="44.426,26.102">Bucharest, Romania</option>
+                        <option value="42.697,23.324">Sofia, Bulgaria</option>
+                        <option value="45.815,15.981">Zagreb, Croatia</option>
+                        <option value="46.056,14.505">Ljubljana, Slovenia</option>
+                        <option value="41.008,28.978">Istanbul, Turkey (Balkan part)</option>
+                    </select>
+                    <span class="tooltip-third">Select a city to see the forecast</span>
+                </div>
+                <div id="weather-results" class="weather-container"></div>
+            </div>
+            
+               
+        
+              <div class="additional-content">
+                  <p>More information about EurOrbit's services...</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<script src="js/weather.js"></script>
+  </body>
+</html>

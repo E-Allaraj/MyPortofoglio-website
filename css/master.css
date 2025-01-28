@@ -1,0 +1,323 @@
+body {
+    background-color: rgb(235, 225, 225);
+    color: black;
+    padding: 48px 128px;
+}
+  
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px;
+    text-align: center; 
+  }
+  
+  .profile-picture {
+    flex: 0 1 500px;
+    width: 20vw;
+    height: 20vw;
+    max-width: 300px;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+    margin-left: 60px;
+    margin-top: 70px;
+  }
+  
+  .img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .first-paragraph {
+    max-width: 600px;
+    text-align: center;
+    margin: 10px auto; 
+    line-height: 1.6; 
+  }
+  
+  
+.first-name{
+    color: rgb(2, 2, 123);
+    font-size: 56px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+.main-text{
+    font-size: 20.8px;
+    font-weight: 500;
+}
+.dot-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; 
+    margin: 20px 0; 
+  }
+  
+  .dot {
+    width: 8px; 
+    height: 8px; 
+    border-radius: 50%;
+    background-color: rgb(220, 26, 172); 
+    margin-top: 40px;
+  }
+.portfolio-text{
+    color: rgb(2, 2, 123);
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.middle-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  
+}
+.middle-section img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-style: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    object-fit: cover;
+}
+
+.first-row{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 40px;
+    
+}
+.txt1{
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.mid-info{
+    color: rgb(73, 73, 73);
+    font-size: 19.2px;
+   
+}
+.button1{
+    background-color: rgb(0, 123, 255);
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    height: 35px;
+    margin-top: 20px;
+    
+}
+.button1:hover{
+  background-color: blue;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.my-skills{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.skill-button{
+  position: relative;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border-style: solid;
+  font-size: 14px;
+  border-color: rgb(78, 77, 77);
+  background-color: rgb(235, 225, 225);
+}
+.tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -150%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-button:hover{
+  cursor: pointer;
+}
+.skill-button:hover .tooltip {  
+  visibility: visible;
+  opacity: 1;
+}
+.star-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+.star-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+}
+.star-skill-text{
+  display: flex;
+  align-items: center;;
+  margin: 0px 0;
+}
+.star-skill-text i {
+  margin-right: 8px; 
+}
+.star-p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.career-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-first{
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.info-second{
+  margin-top: 5px;
+  color: rgb(78, 75, 75);
+  font-weight: bold;
+}
+.skill-paragraph {
+  color: blue;
+  font-size: large;
+  font-weight: bold;
+  position: relative;  
+  border-radius: 6px; 
+  background-color: rgb(235, 225, 225); 
+  cursor: pointer; 
+  display: inline-block; 
+  text-align: center; 
+  margin-top: -10px;
+  margin-bottom: -20px;
+
+}
+.tooltip-second{
+  font-size: small;
+  visibility: hidden; 
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -60%; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  white-space: nowrap;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+.skill-paragraph:hover{
+  color: red;
+}
+.skill-paragraph:hover .tooltip-second {
+  visibility: visible; 
+  opacity: 1; 
+}
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.my-skills-contact{
+  display: flex;
+  align-items: center; 
+}
+.skill-paragraph-contact{
+  color: blue;
+  font-size: large;
+  font-weight: bold;
+  position: relative;  
+  border-radius: 6px; 
+  background-color: rgb(235, 225, 225); 
+  cursor: pointer; 
+  display: inline-block; 
+  text-align: center; 
+  margin: 10px 0px;
+}
+.tooltip-third{
+  font-size: small;
+  visibility: hidden; 
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -150%; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  white-space: nowrap;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+.skill-paragraph-contact:hover .tooltip-third {
+  visibility: visible; 
+  opacity: 1; 
+}
+.skill-paragraph-contact:hover{
+  color: red;
+}
+.skill-paragraph-name{
+  margin: 10px 0px;
+}
+.footer1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright-text{
+  color: rgb(119, 117, 117);
+}
+
+.email-link {
+  text-decoration: none;
+  color: inherit; 
+  font-weight: bold; 
+}
+
+.email-link:hover {
+  text-decoration: underline; 
+  color: #0077b5;
+}
+
+.linkedin-link {
+  text-decoration: none;
+  color: inherit; 
+  font-weight: bold; 
+}
+
+.linkedin-link:hover {
+  text-decoration: underline; 
+  color: #0077b5; 
+}

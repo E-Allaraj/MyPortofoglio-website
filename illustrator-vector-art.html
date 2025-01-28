@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmadhimi i Fotos</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #090909;
+        }
+
+        img {
+            width: 700px; 
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            cursor: zoom-in; 
+        }
+
+        .zoomed {
+            transform: scale(2.5);
+            cursor: zoom-out;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="images/Illustrator Vector Art.webp" alt="Kliko për të zmadhuar" id="photo">
+
+    <script>
+        const photo = document.getElementById('photo');
+
+        photo.addEventListener('click', function () {
+            photo.classList.toggle('zoomed'); 
+        });
+    </script>
+
+</body>
+</html>
