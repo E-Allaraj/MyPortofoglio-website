@@ -1,4 +1,5 @@
-const baseUrl = 'http://www.7timer.info/bin/api.pl';
+const baseUrl = 'https://www.7timer.info/bin/api.pl';  
+const apiUrl = baseUrl + '?lon=23.72&lat=37.98&product=civil&output=json';
 
 const weatherIcons = {
     'clearday': 'icons/about_civil_clear.png', 
