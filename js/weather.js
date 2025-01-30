@@ -29,6 +29,49 @@ const weatherIcons = {
     'humidday': 'icons/about_civil_humidity.png',
     'humidnight': 'icons/about_civil_humidity.png'  
 };
+const weatherNames = {
+    'clearday': 'Clear',
+    'clearnight': 'Clear',
+    'pcloudy': 'Partly Cloudy',
+    'mcloudy': 'Mostly Cloudy',
+    'cloudy': 'Cloudy',
+    'rain': 'Rain',
+    'lightrain': 'Light Rain',
+    'oshower': 'Occasional Showers',
+    'ishower': 'Isolated Shower',
+    'lightsnow': 'Light Snow',
+    'snow': 'Snow',
+    'rainsnow': 'Rain & Snow',
+    'ts': 'Thunderstorm',
+    'tsrain': 'Thunderstorm with Rain',
+    'fog': 'Fog',
+    'windy': 'Windy',
+    'humid': 'Humid'
+};
+
+const weatherVideos = {
+    'rain': 'videos/rain.mp4',
+    'lightrain': 'videos/light_rain.mp4',
+    'snow': 'videos/snow.mp4',
+    'clearday': 'videos/sunny.mp4',
+    'cloudy': 'videos/cloudy.mp4',
+    'default': 'videos/default.mp4'
+};
+
+// Fshi mesazhin kur humb fokusin
+document.querySelectorAll('.message-span').forEach(span => {
+    span.addEventListener('focusout', () => {
+        span.style.display = 'none';
+    });
+});
+
+// Fshi mesazhin kur humb fokusin (duke përdorur blur)
+document.querySelectorAll('.message-span').forEach(span => {
+    span.addEventListener('blur', () => {
+        span.style.display = 'none';
+    });
+});
+
 
 document.getElementById("city-selector").addEventListener("change", function() {
     this.blur(); 
@@ -71,24 +114,33 @@ function displayWeather(weatherData) {
     weatherData.forEach((day, index) => {
         const date = new Date();
         date.setDate(date.getDate() + index);
-
+    
         const weatherBlock = document.createElement('div');
         weatherBlock.className = 'weather-block';
-
-        const weatherCondition = day.weather.toLowerCase().replace(/\s/g, '');
-        const weatherIcon = weatherIcons[weatherCondition] || 'icons/about_civil_default.png';
-
-        console.log(`Weather condition received: ${day.weather}, Mapped Key: ${weatherCondition}, Icon: ${weatherIcon}`);
-
+    
+        // Ruaj vlerën origjinale për ikonën
+        let weatherIconKey = day.weather.toLowerCase().replace(/\s/g, '');
+    
+        // Përkthe emrin e motit duke hequr "day" dhe "night"
+        let weatherKey = weatherIconKey.replace(/day|night/g, '').trim();
+        let formattedWeather = weatherNames[weatherKey] || weatherKey;
+    
+        // Kontrollo gjatësinë e emrit të motit për ndarjen në dy rreshta
+        let formattedWeatherDisplay = formattedWeather.length > 10 ? formattedWeather.replace(/\s/, '<br>') : formattedWeather;
+    
+        // Gjej ikonën për motin e saktë
+        const weatherIcon = weatherIcons[weatherIconKey] || 'icons/about_civil_default.png';
+    
+        console.log(`Weather received: ${day.weather}, Key for Name: ${weatherKey}, Key for Icon: ${weatherIconKey}, Icon: ${weatherIcon}`);
+    
         weatherBlock.innerHTML = `
             <h3>${date.toDateString().slice(0, 10)}</h3>
             <div class="weather-img-container"><img class="weather-icon-img" src="${weatherIcon}" alt="Weather Icon"></div>
-            <p><strong>${day.weather.toUpperCase()}</strong></p>
+            <p><strong>${formattedWeatherDisplay.toUpperCase()}</strong></p>
             <p>Temp: ${day.temp2m}°C</p>
-           
         `;
-
+    
         weatherResults.appendChild(weatherBlock);
     });
-
-}
+    
+}    

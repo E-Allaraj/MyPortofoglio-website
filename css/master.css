@@ -321,7 +321,27 @@ body {
   text-decoration: underline; 
   color: #0077b5; 
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  /* Fshih span dhe tooltip në ekranet me madhësi më të vogla se 768px */
+  .message-span,
+  .tooltip-btn,
+  .tooltip-third {
+    display: none;
+  }
+
+  /* Heq hover efekti për butonat në ekranet e vogla */
+  .powered-btn:hover {
+    background-color: transparent;
+    transform: none;
+  }
+
+  .city-label:hover + .tooltip-third {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+}
+@media screen and (max-width: 910px) {
   body {
       padding: 20px;
   }
