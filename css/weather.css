@@ -359,7 +359,7 @@ body, html {
   }
 }
 
-@media (min-width: 1300px) and (max-width: 1439px) {
+@media (min-width: 1300px) and (max-width: 1440px) {
   .title{
     font-size: 70px;
   }
@@ -384,7 +384,7 @@ body, html {
     font-size: 20px;
   }
 }
-@media (min-width: 1440px) and (max-width: 2559px) {
+@media (min-width: 1441px) and (max-width: 2559px) {
   #weather-results {
     display: flex;
     gap: 30px;
