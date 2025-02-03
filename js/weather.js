@@ -50,14 +50,12 @@ const weatherNames = {
 };
 
 
-// Fshi mesazhin kur humb fokusin
 document.querySelectorAll('.message-span').forEach(span => {
     span.addEventListener('focusout', () => {
         span.style.display = 'none';
     });
 });
 
-// Fshi mesazhin kur humb fokusin (duke përdorur blur)
 document.querySelectorAll('.message-span').forEach(span => {
     span.addEventListener('blur', () => {
         span.style.display = 'none';
@@ -110,12 +108,9 @@ function displayWeather(weatherData) {
         const weatherBlock = document.createElement('div');
         weatherBlock.className = 'weather-block';
     
-        // Ruaj vlerën origjinale për ikonën
         let weatherIconKey = day.weather.toLowerCase().replace(/\s/g, '');
 
-            // Nëse çelësi nuk gjendet në weatherIcons, provo heqjen e 'day' ose 'night'
             if (!weatherIcons.hasOwnProperty(weatherIconKey)) {
-            // Krijo një çelës alternativ duke hequr 'day' ose 'night' në fund
             let altKey = weatherIconKey.replace(/(day|night)$/, '');
             if (weatherIcons.hasOwnProperty(altKey)) {
                 weatherIconKey = altKey;
@@ -123,14 +118,11 @@ function displayWeather(weatherData) {
         }
 
     
-        // Përkthe emrin e motit duke hequr "day" dhe "night"
         let weatherKey = weatherIconKey.replace(/day|night/g, '').trim();
         let formattedWeather = weatherNames[weatherKey] || weatherKey;
     
-        // Kontrollo gjatësinë e emrit të motit për ndarjen në dy rreshta
         let formattedWeatherDisplay = formattedWeather.length > 10 ? formattedWeather.replace(/\s/, '<br>') : formattedWeather;
     
-        // Gjej ikonën për motin e saktë
         const weatherIcon = weatherIcons[weatherIconKey] || 'icons/about_civil_default.png';
     
         console.log(`Weather received: ${day.weather}, Key for Name: ${weatherKey}, Key for Icon: ${weatherIconKey}, Icon: ${weatherIcon}`);

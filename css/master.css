@@ -322,9 +322,7 @@ body {
   color: #0077b5; 
 }
 
-/* lets start with media css*/
 
-/* Media Queries për telefonin e vogël */
 @media (max-width: 376px) {
   body {
     background-color: rgb(235, 225, 225);
@@ -411,7 +409,7 @@ body {
   }
 }
 
-/* Media Queries për telefonin më të madh */
+
 @media (min-width: 377px) and (max-width: 426px) {
   body {
     background-color: rgb(235, 225, 225);
@@ -498,7 +496,7 @@ body {
   }
 }
 
-/* Media Queries për tabletin */
+
 @media (min-width: 427px) and (max-width: 768px) {
   .header {
     display: flex;
@@ -969,7 +967,7 @@ body {
   }
 }
 
-/* Fshih tooltip në ekranet më të vogla se 1024px */
+
 @media (max-width: 1023px) {
   .tooltip {
     display: none;

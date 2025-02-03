@@ -18,9 +18,9 @@
             width: 700px; 
             height: auto;
             cursor: pointer;
-            transition: transform 0.3s ease; /* Smooth transition */
+            transition: transform 0.3s ease; 
             cursor: zoom-in;
-            transform-origin: center center; /* Default to center */
+            transform-origin: center center; 
         }
 
         .zoomed {
@@ -41,13 +41,13 @@
                 margin: 0;
                 padding: 0;
                 height: 100%;
-                overflow: hidden;  /* Parandalon skrollin */
+                overflow: hidden;  
             }
 
             img {
                 width: 100%;
-                height: 100%; /* Siguron që imazhi të mbulojë gjithësinë e ekranit */
-                object-fit: contain; /* Imazhi do të mbulojë të gjithë hapësirën pa deformuar */
+                height: 100%; 
+                object-fit: contain; 
             }
         }
         @media screen and (max-width: 2783px) {
@@ -55,13 +55,13 @@
                 margin: 0;
                 padding: 0;
                 height: 100%;
-                overflow: hidden;  /* Parandalon skrollin */
+                overflow: hidden;  
             }
 
             img {
                 width: 100%;
-                height: 100%; /* Siguron që imazhi të mbulojë gjithësinë e ekranit */
-                object-fit: contain; /* Imazhi do të mbulojë të gjithë hapësirën pa deformuar */
+                height: 100%; 
+                object-fit: contain; 
             }
         }
 
@@ -77,15 +77,15 @@
         const photo = document.getElementById('photo');
 
         photo.addEventListener('click', function (event) {
-            // Llogaritja e pozicionit të klikimit në imazh
+           
             const rect = photo.getBoundingClientRect();
             const offsetX = event.clientX - rect.left;
             const offsetY = event.clientY - rect.top;
 
-            // Vendosja e origjinës së transformimit në pikën e klikimit
+            
             photo.style.transformOrigin = `${offsetX}px ${offsetY}px`;
 
-            // Ndryshimi i klasës për të aktivizuar zmadhimin
+      
             photo.classList.toggle('zoomed'); 
         });
     </script>
