@@ -49,14 +49,6 @@ const weatherNames = {
     'humid': 'Humid'
 };
 
-const weatherVideos = {
-    'rain': 'videos/rain.mp4',
-    'lightrain': 'videos/light_rain.mp4',
-    'snow': 'videos/snow.mp4',
-    'clearday': 'videos/sunny.mp4',
-    'cloudy': 'videos/cloudy.mp4',
-    'default': 'videos/default.mp4'
-};
 
 // Fshi mesazhin kur humb fokusin
 document.querySelectorAll('.message-span').forEach(span => {
@@ -120,6 +112,16 @@ function displayWeather(weatherData) {
     
         // Ruaj vlerën origjinale për ikonën
         let weatherIconKey = day.weather.toLowerCase().replace(/\s/g, '');
+
+            // Nëse çelësi nuk gjendet në weatherIcons, provo heqjen e 'day' ose 'night'
+            if (!weatherIcons.hasOwnProperty(weatherIconKey)) {
+            // Krijo një çelës alternativ duke hequr 'day' ose 'night' në fund
+            let altKey = weatherIconKey.replace(/(day|night)$/, '');
+            if (weatherIcons.hasOwnProperty(altKey)) {
+                weatherIconKey = altKey;
+            }
+        }
+
     
         // Përkthe emrin e motit duke hequr "day" dhe "night"
         let weatherKey = weatherIconKey.replace(/day|night/g, '').trim();

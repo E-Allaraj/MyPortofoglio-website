@@ -82,7 +82,7 @@ body {
   
 }
 .middle-section img{
-    width: 300px;
+    max-width: 300px;
     height: 300px;
     border-radius: 50%;
     border-style: none;
@@ -226,7 +226,7 @@ body {
   padding: 5px;
   border-radius: 5px;
   position: absolute;
-  bottom: -60%; 
+  bottom: -100%; 
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -321,98 +321,671 @@ body {
   text-decoration: underline; 
   color: #0077b5; 
 }
-@media (max-width: 768px) {
-  /* Fshih span dhe tooltip në ekranet me madhësi më të vogla se 768px */
-  .message-span,
-  .tooltip-btn,
-  .tooltip-third {
-    display: none;
-  }
 
-  /* Heq hover efekti për butonat në ekranet e vogla */
-  .powered-btn:hover {
-    background-color: transparent;
-    transform: none;
-  }
+/* lets start with media css*/
 
-  .city-label:hover + .tooltip-third {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-}
-@media screen and (max-width: 910px) {
+/* Media Queries për telefonin e vogël */
+@media (max-width: 376px) {
   body {
-      padding: 20px;
+    background-color: rgb(235, 225, 225);
+    color: black;
+    padding: 1px;
+}
+  p {
+    font-size: 12px;
   }
-
-  .header{
+  .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+  }
+  .profile-picture {
+    width: 50vw;
+    height: 50vw;
+    max-width: 150px;
+    max-height: 150px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .first-name {
+    font-size: 16px;
+  }
+  .portfolio-text {
+    font-size: 14px;
   }
   
-  .profile-picture {
-      width: 50vw;
-      height: 50vw;
-      max-width: 150px;
-      max-height: 150px;
-      margin-left: 0;
-      margin-top: 30px;
-  }
-
-  .first-name {
-      font-size: 36px;
-  }
-
-  .portfolio-text {
-      font-size: 28px;
-  }
-
-  .middle-section {
-      flex-direction: column;
-      gap: 20px;
-  }
-
   .middle-section img {
-      width: 80%;
-      height: auto;
+    max-width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
   }
-
-  .first-row {
-      margin: 20px;
+  .middle-section{
+    gap: 0;
   }
-
   .txt1 {
-      font-size: 16px;
+    font-size: 12px;
   }
-
   .mid-info {
-      font-size: 16px;
+    font-size: 14px;
   }
-
   .button1 {
-      width: 100%;
-      padding: 10px 0;
+    width: 100%;
+    padding: 10px 0;
   }
-
   .my-skills {
-      flex-direction: column;
-      gap: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
-
+  .skill-button {
+    width: 80px;
+    font-size: 12px;
+  }
   .star-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
-
   .footer1 {
-      flex-direction: column;
+    flex-direction: column;
+  }
+  .copyright-text {
+    font-size: 12px;
+  }
+  .button1 {
+    max-width: 200px;
+  }
+  .skill-paragraph,
+  .skill-paragraph-contact,
+  .skill-paragraph-name {
+    font-size: 14px;
+  }
+  .dot {
+    width: 8px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(220, 26, 172);
+    margin-top: 40px;
+  }
+}
+
+/* Media Queries për telefonin më të madh */
+@media (min-width: 377px) and (max-width: 426px) {
+  body {
+    background-color: rgb(235, 225, 225);
+    color: black;
+    padding: 1px;
+  }
+  p {
+    font-size: 13.5px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-picture {
+    width: 50vw;
+    height: 50vw;
+    max-width: 150px;
+    max-height: 150px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .first-name {
+    font-size: 20px;
+  }
+  .portfolio-text {
+    font-size: 14px;
+  }
+  
+  .middle-section img {
+    max-width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .middle-section{
+    gap: 0;
+  }
+  .txt1 {
+    font-size: 12px;
+  }
+  .mid-info {
+    font-size: 14px;
+  }
+  .button1 {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .my-skills {
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .skill-button {
+    width: 80px;
+    font-size: 12px;
+  }
+  .star-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer1 {
+    flex-direction: column;
+  }
+  .copyright-text {
+    font-size: 13px;
+  }
+  .button1 {
+    max-width: 200px;
+  }
+  .skill-paragraph,
+  .skill-paragraph-contact,
+  .skill-paragraph-name {
+    font-size: 14px;
+  }
+  .dot {
+    width: 8px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(220, 26, 172);
+    margin-top: 40px;
+  }
+}
+
+/* Media Queries për tabletin */
+@media (min-width: 427px) and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-picture {
+    width: 50vw;
+    height: 50vw;
+    max-width: 150px;
+    max-height: 150px;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .first-name {
+    font-size: 36px;
+  }
+  .portfolio-text {
+    font-size: 28px;
+  }
+  .middle-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 80px;
+  }
+  .first-row {
+    width: calc(50% - 20px);
+    max-width: 120px;
+  }
+  .middle-section img {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .txt1 {
+    font-size: 20px;
+  }
+  .mid-info {
+    font-size: 18px;
+  }
+  .button1 {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .my-skills {
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .skill-button {
+    width: 130px;
+    font-size: 14px;
+  }
+  .star-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer1 {
+    flex-direction: column;
+  }
+  .copyright-text {
+    font-size: 14px;
+  }
+  .button1 {
+    max-width: 200px;
+  }
+  .skill-paragraph,
+  .skill-paragraph-contact,
+  .skill-paragraph-name {
+    font-size: 18px;
+  }
+  .dot {
+    width: 20px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(220, 26, 172);
+    margin-top: 40px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  body {
+    background-color: rgb(235, 225, 225);
+    color: black;
+    padding: 1px;
+  }
+  p {
+    font-size: 13.5px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-picture {
+    width: 60vw;
+    height: 60vw;
+    max-width: 190px;
+    max-height: 190px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .first-name {
+    font-size: 34px;
+  }
+  .portfolio-text {
+    font-size: 28px;
+  }
+  
+  .middle-section img {
+    max-width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .middle-section{
+    gap: 10;
+  }
+  .txt1 {
+    font-size: 18px;
+  }
+  .mid-info {
+    font-size: 15px;
+  }
+  .button1 {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .my-skills {
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .skill-button {
+    width: 200px;
+    font-size: 17px;
+  }
+  .star-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer1 {
+    flex-direction: column;
+  }
+  .copyright-text {
+    font-size: 13px;
+  }
+  .button1 {
+    max-width: 200px;
+  }
+  .skill-paragraph,
+  .skill-paragraph-contact,
+  .skill-paragraph-name {
+    font-size: 18px;
+  }
+  .dot {
+    width: 8px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(220, 26, 172);
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    background-color: rgb(235, 225, 225);
+    color: black;
+    padding: 1px;
+  }
+  p {
+    font-size: 17px;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 120px;
+    margin-right: 50px;
+    column-gap: 30px;
+  }
+  .profile-picture {
+    width: 60vw;
+    height: 60vw;
+    max-width: 186px;
+    max-height: 186px;
+    margin-left: 0;
+    margin-top: 20px;
+    object-fit: cover;
+  }
+  .first-name {
+    font-size: 40px;
+  }
+  .portfolio-text {
+    font-size: 32px;
+  }
+  
+  .middle-section img {
+    max-width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .middle-section{
+    gap: 10;
+  }
+  .txt1 {
+    font-size: 18px;
+  }
+  .mid-info {
+    font-size: 17px;
+  }
+  .button1 {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .my-skills {
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .skill-button {
+    width: 200px;
+    font-size: 17px;
+  }
+  .star-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer1 {
+    flex-direction: column;
+  }
+  .copyright-text {
+    font-size: 17px;
+  }
+  .button1 {
+    max-width: 200px;
+  }
+  .skill-paragraph,
+  .skill-paragraph-contact,
+  .skill-paragraph-name {
+    font-size: 18px;
+  }
+  .dot {
+    width: 8px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(220, 26, 172);
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+  body {
+    background-color: rgb(235, 225, 225);
+    color: black;
+    padding: 1px;
+  }
+  p {
+    font-size: 19px;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 140px;
+    margin-right: 140px;
+    column-gap: 30px;
+  }
+  .profile-picture {
+    width: 60vw;
+    height: 60vw;
+    max-width: 286px;
+    max-height: 286px;
+    margin-left: 0;
+    margin-top: 20px;
+    object-fit: cover;
+  }
+  .first-name {
+    font-size: 48px;
+  }
+  .portfolio-text {
+    font-size: 36px;
+  }
+  
+  .middle-section img {
+    max-width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .middle-section{
+    gap: 60px;
+  }
+  .txt1 {
+    font-size: 26px;
+  }
+  .mid-info {
+    font-size: 20px;
+  }
+  .button1 {
+    width: 100%;
+    padding: 10px0;
+    font-size: 20px;
+  }
+  .my-skills {
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .skill-button {
+    width: 240px;
+    font-size: 24px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .star-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .star-p{
+    font-size: 24px;
+  }
+  .footer1 {
+    flex-direction: column;
+  }
+  .copyright-text {
+    font-size: 17px;
+  }
+  .button1 {
+    max-width: 200px;
+  }
+  .skill-paragraph,
+  .skill-paragraph-contact,
+  .skill-paragraph-name {
+    font-size: 22px;
+  }
+  .dot {
+    width: 8px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(220, 26, 172);
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    background-color: rgb(235, 225, 225);
+    color: black;
+    padding: 1px;
+  }
+  p {
+    font-size: 40px;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+  .first-paragraph{
+    margin: 50px;
+    max-width: 800px;
+  }
+  .main-text{
+    font-size: 46px;
+  }
+  .profile-picture {
+    width: 60vw;
+    height: 60vw;
+    max-width: 486px;
+    max-height: 486px;
+    margin-left: 0;
+    margin-top: 20px;
+    object-fit: cover;
+  }
+  .first-name {
+    font-size: 88px;
+  }
+  .portfolio-text {
+    font-size: 54px;
+  }
+  
+  .middle-section img {
+    max-width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .middle-section{
+    gap: 150px;
+  }
+  .txt1 {
+    font-size: 46px;
+  }
+  .mid-info {
+    font-size: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .button1 {
+    width: 100%;
+    padding: 10px0;
+    font-size: 40px;
+    border-radius: 12px;
+    max-width: 440px;
+    height: auto;
   }
 
+  .button1:active{
+    width: 100%;
+    padding: 10px0;
+    font-size: 40px;
+    border-radius: 12px;
+    max-width: 440px;
+    height: auto;
+  }
+  .my-skills {
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .skill-button {
+    width: 240px;
+    font-size: 34px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .star-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .star-p{
+    font-size: 34px;
+  }
+  .footer1 {
+    flex-direction: column;
+  }
   .copyright-text {
-      font-size: 14px;
+    font-size: 27px;
+  }
+
+  .skill-paragraph,
+  .skill-paragraph-contact,
+  .skill-paragraph-name {
+    font-size: 40px;
+  }
+  .dot {
+    width: 8px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(220, 26, 172);
+    margin-top: 40px;
+  }
+}
+
+/* Fshih tooltip në ekranet më të vogla se 1024px */
+@media (max-width: 1023px) {
+  .tooltip {
+    display: none;
+  }
+  .message-span,
+  .tooltip-btn,
+  .tooltip-second,
+  .tooltip-third {
+    display: none;
+  }
+  .powered-btn:hover {
+    background-color: transparent;
+    transform: none;
+  }
+  .city-label:hover + .tooltip-third {
+    visibility: hidden;
+    opacity: 0;
   }
 }
